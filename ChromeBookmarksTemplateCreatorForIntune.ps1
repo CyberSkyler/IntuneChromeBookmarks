@@ -22,7 +22,7 @@ for ($i = 2; $i -le $lastRow; $i++) {
     Add-Content C:\$folder.txt "    ""name"": ""$name"""
     Add-Content C:\$folder.txt "  },"
 }
-
+Add-Content C:\$folder.txt "]"
 # Close the workbook and Excel application
 $workbook.Close()
 $excel.Quit()
