@@ -13,3 +13,5 @@ Your output should look something like this:
 ![image](https://github.com/CyberSkyler/IntuneChromeBookmarks/assets/153866716/ce9ad45e-50d3-4f4f-90c8-ae2e2a861b6d)
 
 Does not currently support child folders.
+
+More information about deploying Chrome Bookmarks via Intune. (Not my blog) https://www.anoopcnair.com/configure-google-chrome-bookmarks-using-intune/
