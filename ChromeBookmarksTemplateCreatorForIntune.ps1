@@ -1,4 +1,3 @@
-﻿Set-ExecutionPolicy Unrestricted
 # Load the Excel COM object
 $excel = New-Object -ComObject Excel.Application
 $workbook = $excel.Workbooks.Open("C:\Book1")
@@ -7,6 +6,7 @@ $worksheet = $workbook.Worksheets.Item(1)
 # Get the last row in the Excel sheet
 $lastRow = $worksheet.UsedRange.Rows.Count
 $folder = $worksheet.Cells.Item(2, 1).Value2
+# Add bookmark folder name
 Add-Content C:\$folder.txt "["
 Add-Content C:\$folder.txt "  {"
 Add-Content C:\$folder.txt "    ""toplevel_name"": ""$folder"""
@@ -16,7 +16,7 @@ for ($i = 2; $i -le $lastRow; $i++) {
     $name = $worksheet.Cells.Item($i, 2).Value2
     $url = $worksheet.Cells.Item($i, 3).Value2
 
-    # You can perform actions using these variables here
+# Add the bookmark
     Add-Content C:\$folder.txt "  {"
     Add-Content C:\$folder.txt "    ""url"": ""$url"","
     Add-Content C:\$folder.txt "    ""name"": ""$name"""
